@@ -9,7 +9,7 @@ class Gallery extends Component {
     const { imgPath, isLoading, useDefaultImg } = this.props;
     return (
       <div className="gallery-container">
-        {isLoading && <div>Loading...</div>}
+        {isLoading && <div className='loading'>Loading...</div>}
         {useDefaultImg && <img src={defaultCat} alt="default cat" />}
         {!isLoading && !useDefaultImg && <img src={imgPath} alt="random cat" />}
       </div>
